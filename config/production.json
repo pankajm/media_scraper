@@ -1,0 +1,8 @@
+{
+  "dbConnectionDetails": {
+    "host": "localhost",
+    "user": "root",
+    "password": "root_123",
+    "database": "db_media"
+  }
+}

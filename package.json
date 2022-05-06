@@ -1,0 +1,21 @@
+{
+  "name": "media_scrapper",
+  "version": "1.0.0",
+  "description": "This project contains two major components - A media scrapper engine and an API to expose the media data to client",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pankaj Marghade",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.0",
+    "cheerio": "^1.0.0-rc.10",
+    "config": "^3.3.7",
+    "express": "^4.17.2",
+    "md5": "^2.3.0",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.3.3",
+    "winston": "^3.6.0"
+  }
+}
