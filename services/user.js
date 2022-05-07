@@ -10,7 +10,6 @@ function authenticate(username, password) {
 
     db.query(sql, [username, md5password], function (err, results) {
       if (err) return reject(err);
-      console.log(results);
       return resolve(results);
     });
   });

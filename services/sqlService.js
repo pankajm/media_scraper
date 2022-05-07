@@ -24,7 +24,6 @@ const storeMediaInDB = (mediaUrls) => {
 const getMediaFromDB = () => {
   return new Promise((resolve, reject) => {
     const sql = "SELECT * from media_info";
-    console.log("hehe");
     db.query(sql, function (err, result) {
       if (err) return reject(err);
       else return resolve(result);

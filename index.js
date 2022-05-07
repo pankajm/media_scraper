@@ -7,7 +7,7 @@ require("./startup/logging").registerGlobalLogging();
 require("./startup/database").connectDB();
 const error = require("./middleware/error");
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 80;
 
 app.listen(port, () => {
   logger.info(`Server is listening on port ${port}`);

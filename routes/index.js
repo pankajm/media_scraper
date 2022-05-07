@@ -58,7 +58,7 @@ router.post("/scrapMedia", [basicAuth], async (req, res, next) => {
 router.get("/getMedia", [basicAuth], async (req, res, next) => {
   try {
     const response = await getMediaFromDB();
-    return res.status(200).send(response);
+    return res.status(200).json(response);
   } catch (err) {
     logger.error("error while geting media data from db", err);
     next(err);
