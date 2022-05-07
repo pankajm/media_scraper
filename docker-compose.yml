@@ -1,0 +1,41 @@
+version: "3.0"
+
+services:
+  mysqldb:
+    image: mysql:5.7
+    restart: always
+    container_name: mysqldb
+    volumes:
+      - "./dbinit/init.sql:/docker-entrypoint-initdb.d/0_init.sql"
+      - $HOME/database:/var/lib/mysql
+
+    expose:
+      - 3306
+    ports:
+      - 3306
+
+    environment:
+      MYSQL_DATABASE: db_media
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root_123
+      MYSQL_ROOT_PASSWORD: root_123
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysqldb
+    networks:
+      - internalnet
+
+  app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 80
+    image: media-scraper-app
+    depends_on:
+      - mysqldb
+    stdin_open: true
+    tty: true
+
+networks:
+  internalnet:
+    driver: bridge

@@ -4,7 +4,8 @@
   "description": "This project contains two major components - A media scrapper engine and an API to expose the media data to client",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "author": "Pankaj Marghade",
   "license": "ISC",
